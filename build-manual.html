@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>build-manual</title>
+<!-- 2016-07-05 Tue 21:44 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Nick Winters" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">build-manual</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. SBHXY Build Manual</a></li>
+<li><a href="#sec-2">2. Common Build Hints</a>
+<ul>
+<li><a href="#sec-2-1">2.1. Captive Nuts</a></li>
+<li><a href="#sec-2-2">2.2. "Tightness"</a></li>
+<li><a href="#sec-2-3">2.3. [fitting laser slots together]</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Assembly Instructions</a></li>
+<li><a href="#sec-4">4. Front Panel</a></li>
+<li><a href="#sec-5">5. Frame "Skeleton"</a></li>
+<li><a href="#sec-6">6. Z-Axis</a>
+<ul>
+<li><a href="#sec-6-1">6.1. Z Motor mount</a></li>
+<li><a href="#sec-6-2">6.2. Z Idler</a></li>
+<li><a href="#sec-6-3">6.3. Z Carriage</a></li>
+<li><a href="#sec-6-4">6.4. Bed</a></li>
+<li><a href="#sec-6-5">6.5. Z-Axis assembly in frame</a></li>
+<li><a href="#sec-6-6">6.6. Z-Axis homing switch</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7. XY Assembly</a>
+<ul>
+<li><a href="#sec-7-1">7.1. AB Motor mounts</a></li>
+<li><a href="#sec-7-2">7.2. X-Ends</a></li>
+<li><a href="#sec-7-3">7.3. X Axis</a></li>
+<li><a href="#sec-7-4">7.4. Back short rods</a></li>
+<li><a href="#sec-7-5">7.5. Back Lower short rod idlers</a></li>
+<li><a href="#sec-7-6">7.6. Y Rod-holder back corners</a></li>
+<li><a href="#sec-7-7">7.7. Y Rod-holder front corners and idlers</a></li>
+<li><a href="#sec-7-8">7.8. X-carriage back</a></li>
+<li><a href="#sec-7-9">7.9. XY first assembly</a></li>
+<li><a href="#sec-7-10">7.10. XY assembly into frame</a></li>
+<li><a href="#sec-7-11">7.11. X carriage back + belt</a></li>
+<li><a href="#sec-7-12">7.12. X carriage front</a></li>
+<li><a href="#sec-7-13">7.13. Extruder Idler lever</a></li>
+<li><a href="#sec-7-14">7.14. E3d hotend</a></li>
+<li><a href="#sec-7-15">7.15. Extruder</a></li>
+<li><a href="#sec-7-16">7.16. Fan Duct</a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8. Frame Left/right</a></li>
+<li><a href="#sec-9">9. Odds and ends</a>
+<ul>
+<li><a href="#sec-9-1">9.1. Lights?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> SBHXY Build Manual</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+This is the build manual for the SBHXY.
+</p>
+
+<pre class="example">
+[[./images/demo.png]]
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Common Build Hints</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+There are a couple of things that make easier.
+</p>
+</div>
+
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Captive Nuts</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Captive nuts that go flat into a part are easier to insert using a longer bolt to push them in.
+</p>
+
+<p>
+Captive nuts that go in sideways fit in with the point first into the
+part and are easier to insert with pliers. Once you get it started use
+the tips of your pliers to push the nut in the rest of the way.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> "Tightness"</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+[don't over tighten bolts. Most of the nuts on this printer sit in
+printed parts or wood which will colapse or deform when over-tightened
+which may prevent you from disassembling it later and will end up
+looser than tightening the screws "just enough"]
+</p>
+
+<p>
+[how do you know how much is enough?]
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> [fitting laser slots together]</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+[these might be tight. If you hammer them or pull unevenly apart the melamine kind of delaminates.]
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Assembly Instructions</h2>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Front Panel</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Parts:
+</p>
+<ul class="org-ul">
+<li>Lasercut front panel
+</li>
+<li>4 of M3x25 SHCS
+</li>
+<li>4 of 10mm spacer with 3mm hole
+</li>
+<li>4 of M3 nylon lock nut
+</li>
+<li>RepRapDiscount Smart Controller or clone
+</li>
+<li>Optional: foam or foam tape, approximately 3mm thick
+</li>
+</ul>
+
+<p>
+If your LCD is loose from the back PCB of the LCD, it will vibrate and make noise. Put foam between the two.
+</p>
+
+<p>
+Install the LCD with 10mm spacers and M3x25 and lock nuts. The LCD
+will be on the lower left corner as viewed from the front of the
+machine, with the SD card sticking out to the left and the knob on the
+right of the LCD.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Frame "Skeleton"</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Parts:
+</p>
+<ul class="org-ul">
+<li>Lasercut front panel (with LCD installed)
+</li>
+<li>Lasercut bottom panel
+</li>
+<li>Lasercut back panel
+</li>
+<li>Lasercut top panel
+</li>
+<li>12 of M3 hex nut
+</li>
+<li>12 of M3x12 SHCS
+</li>
+</ul>
+
+<p>
+Assemble the following frame pieces: Top, Front, Bottom, Back. M3 nuts
+are inserted into the traps then M3x12 bolts go through front and back
+panels to hold the pieces together.
+</p>
+
+<p>
+The bottom panel has the holes towards the back of the machine, with
+the pair of non-symetrical holes on the right as the assembled machine
+is viewed from the front. These holes mount the Z homing switch.
+</p>
+
+<p>
+The back panel has a slot near the top corner, this also goes towards
+the right as viewed from the front of the assembled machine.
+</p>
+
+<p>
+The top panel is the same in every direction.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Z-Axis</h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Z Motor mount</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+Parts:
+</p>
+<ul class="org-ul">
+<li>Printed Z motor mount
+</li>
+<li>6 of M3 hex nuts
+</li>
+<li>4 of M3x10 SHCS
+</li>
+<li>NEMA17 Stepper Motor
+</li>
+<li>GT2 Belt Pulley, 20 teeth with setscrews
+</li>
+</ul>
+
+<p>
+Install the 6 M3 hex nuts into the traps using longer M3 bolts. The
+ones going through the side of the printed part are easier to install
+by putting the long bolt through, then threading the nut on, then
+pulling bolt to seat the nut, then unscrewing the bolt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> Z Idler</h3>
+<div class="outline-text-3" id="text-6-2">
+
+<div class="figure">
+<p><img src="./images/assembly z-top-rodholder.png" alt="assembly z-top-rodholder.png" />
+</p>
+</div>
+
+<p>
+Parts:
+</p>
+<ul class="org-ul">
+<li>Printed Z idler mount
+</li>
+<li>2 of 624 Flanged bearings
+</li>
+<li>M4x20 SHCS
+</li>
+<li>M4 hex nut
+</li>
+<li>2 of M4 flat Washer
+</li>
+</ul>
+
+<p>
+Insert the washers on the outside, bearing pair in the middle into the
+hole for the belt idler, insert the nut and bolt. The bearings should
+spin easily, and not be loose between the printed part to slide along the bolt.
+</p>
+
+<p>
+Insert the two M3 nuts into the nut traps using longer bolts to pull
+them in place like before.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6-3" class="outline-3">
+<h3 id="sec-6-3"><span class="section-number-3">6.3</span> Z Carriage</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+Parts:
+</p>
+<ul class="org-ul">
+<li>2 of Z lasercut Z side panels
+</li>
+<li>lasercut Z top panel (has 8 rectangular holes and 4 round ones)
+</li>
+<li>lasercut Z back panel
+</li>
+<li>4 of Printed Z bearing holder
+</li>
+<li>Printed Z belt holder
+</li>
+<li>Printed Z switch screw holder
+</li>
+<li>12 of M3 Hex Nut
+</li>
+<li>6 of M3x12 SHCS
+</li>
+<li>2 of M3x16 SHCS
+</li>
+<li>4 of M3x12 SHCS
+</li>
+<li>about 18 inches (0.5 meter) of 6mm wide GT-2 Belt
+</li>
+</ul>
+
+<p>
+Using a long bolt install 2 hex nuts into the traps on the belt
+holder. 
+</p>
+
+<p>
+Again, using the long bolt put 6 hex nuts into the traps on each of
+the Z bearing holders.
+</p>
+
+<p>
+Install one belt end in belt holder with pliers before assembling. The other belt end will be put in once both rod holders and the carriage are assembled.
+</p>
+
+<p>
+[Don't fully tighten parts on back plate]
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6-4" class="outline-3">
+<h3 id="sec-6-4"><span class="section-number-3">6.4</span> Bed</h3>
+<div class="outline-text-3" id="text-6-4">
+<p>
+Parts:
+</p>
+<ul class="org-ul">
+<li>Lasercut print bed (only 3 holes)
+</li>
+<li>3 of M3x30 FHCS (Flat head countersunk screws)
+</li>
+<li>6 of M3 Hex Nut
+</li>
+<li>6 of M4 flat washer
+</li>
+<li>3 of Spring
+</li>
+<li>3 or Printed thumb nut adapter
+</li>
+<li>Z carriage assembly
+</li>
+<li>Blue tape
+</li>
+</ul>
+
+<p>
+If not already countersunk, countersink the holes in the lasercut
+plate so the screw heads are flush or slightly lower than the
+surrounding wood.
+</p>
+
+<p>
+Insert nuts into the 3 thumb nut adapters with the help of a longer
+bolt.
+</p>
+
+<p>
+Insert the flat head bolts through the lasercut piece and tighten a
+hex nut on each bolt all the way up to the plate.
+</p>
+
+<p>
+On each bolt, add a M4 washer, spring, then another washer, then the
+lower Z assembly top plate then the thumb nut adapter. Tighten the
+thumb nuts so the springs are about half way compressed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6-5" class="outline-3">
+<h3 id="sec-6-5"><span class="section-number-3">6.5</span> Z-Axis assembly in frame</h3>
+<div class="outline-text-3" id="text-6-5">
+<p>
+Parts:
+</p>
+<ul class="org-ul">
+<li>8 of M3x12 SHCS
+</li>
+<li>2 of 173mm 8mm smooth rod
+</li>
+</ul>
+
+<p>
+Insert the rods into the idler and motor mounts. Loop the belt around the motor (slide the motor up first).
+</p>
+
+<p>
+Bolt the Z motor mount and top mount into the frame.
+</p>
+
+<p>
+Use pliers to install the other belt end. Loop the excess back and hold in place with a zip tie. Trim the zip tie.
+</p>
+
+<p>
+Using M3 allen key through the holes in the back plate, tighten the screws on the back of the Z-carriage.
+</p>
+
+<p>
+While pulling the motor downwards to tension the belt, tighten the motor screws to set the belt tension.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6-6" class="outline-3">
+<h3 id="sec-6-6"><span class="section-number-3">6.6</span> Z-Axis homing switch</h3>
+<div class="outline-text-3" id="text-6-6">
+<p>
+Parts:
+</p>
+<ul class="org-ul">
+<li>Printed Z homing switch mount
+</li>
+<li>Homing Switch SS-5GL [with approximately 8 inches of wires]
+</li>
+<li>2 of #4-1/2" wood screw
+</li>
+<li>2 of M3 Hex Nut
+</li>
+<li>2 of M3x25 SHCS
+</li>
+</ul>
+
+<p>
+Insert nuts into traps.
+</p>
+
+<p>
+Run the wood screws through the homing switch into the plastic part.
+</p>
+
+<p>
+Bolt into the bottom plate of box using M3x25 screws.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> XY Assembly</h2>
+<div class="outline-text-2" id="text-7">
+</div><div id="outline-container-sec-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> AB Motor mounts</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+Parts:
+</p>
+<ul class="org-ul">
+<li>Lasercut left panel
+</li>
+<li>Lasercut right panel
+</li>
+<li>2 of Printed AB Motor Mount
+</li>
+<li>2 of NEMA17 Stepper Motor
+</li>
+<li>8 of M3 Hex Nut
+</li>
+<li>8 of M3x10 SHCS
+</li>
+<li>8 of M3x12 SHCS
+</li>
+<li>8 of M3 Flat Washer
+</li>
+</ul>
+
+<p>
+Put M3 nuts in the nut traps.
+</p>
+
+<p>
+Install a motor with pulley in each motor mount using the M3x10 SHCS
+and flat washers.
+</p>
+
+<p>
+Bolt the motor mounts, loosely, to the left and right side panels
+using M3x12 SHCS. The slotted holes let us tension the short belts later.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-2" class="outline-3">
+<h3 id="sec-7-2"><span class="section-number-3">7.2</span> X-Ends</h3>
+<div class="outline-text-3" id="text-7-2">
+<p>
+Parts:
+</p>
+<ul class="org-ul">
+<li>Printed Left X-End
+</li>
+<li>Printed Right X-End
+</li>
+<li>8 of flanged 624 bearing for belt idler
+</li>
+<li>4 Printed X Idler Spacer (4mm hole, approx 11.6mm tall)
+</li>
+<li>2 of long LM8LUU Linear Bearing 8x15x45mm
+</li>
+<li>4 of M4 Hex Nut
+</li>
+<li>4 of M4 Flat Washer
+</li>
+<li>4 of M4x45 SHCS
+</li>
+</ul>
+
+<p>
+Insert M4 nuts into nut traps.
+</p>
+
+<p>
+Assemble the idlers as pictured. The idler stack is washer, bearing,
+bearing then spacer. Make sure the spacers are on the correct side as pictured.
+</p>
+
+<p>
+The belt-path on these parts should NOT be assembled as mirror images. 
+</p>
+
+<p>
+[As long as both are assembled where each has one idler high, and the other low, and they are not built as mirror images you can assemble the rest fine]
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-3" class="outline-3">
+<h3 id="sec-7-3"><span class="section-number-3">7.3</span> X Axis</h3>
+<div class="outline-text-3" id="text-7-3">
+<p>
+Parts:
+</p>
+<ul class="org-ul">
+<li>Left X-end assembly
+</li>
+<li>Right X-end assembly
+</li>
+<li>4 of short LMS8UU 8x15x17
+</li>
+<li>2 of 8mm smooth rod 173mm long
+</li>
+</ul>
+
+<p>
+Carefully put two LMS8UU linear bearings on each smooth rod.
+</p>
+
+<p>
+Insert the rods into the holes on the side of one X-end, then put the
+other X-end on the other side.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-4" class="outline-3">
+<h3 id="sec-7-4"><span class="section-number-3">7.4</span> Back short rods</h3>
+<div class="outline-text-3" id="text-7-4">
+<p>
+Parts:
+</p>
+<ul class="org-ul">
+<li>2 of 5mm shaft, 100mm long
+</li>
+<li>4 of 20 tooth GT2 pulley
+</li>
+<li>Printed pulley spacer (shorter, about 4.85mm long with 5mm bore)
+</li>
+<li>Printed pulley spacer (longer, about 15.65mm long with 5mm bore)
+</li>
+</ul>
+
+<p>
+Assemble the parts on the smooth rod as follows:
+</p>
+<ul class="org-ul">
+<li>about 4mm of shaft bare
+</li>
+<li>printed spacer
+</li>
+<li>Pulley with belt closer to spacer. Tighten setscrews.
+</li>
+<li>about 50mm of shaft bare
+</li>
+<li>Pulley oriented in same direction. Leave setscrews slight loose, we
+will tighten them later.
+</li>
+</ul>
+
+<p>
+One rod gets the longer spacer, and one the shorter spacer. 
+</p>
+
+<p>
+Leave about 4mm of shaft sticking out of the spacer on one end of the shaft.
+</p>
+
+<p>
+The pulley away from the spacer will be put in position later when
+later parts are assembled.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-5" class="outline-3">
+<h3 id="sec-7-5"><span class="section-number-3">7.5</span> Back Lower short rod idlers</h3>
+<div class="outline-text-3" id="text-7-5">
+<p>
+These parts go on the back of the machine and hold the lower end of
+the short rods that drive the belts on the top.
+</p>
+
+<p>
+Parts:
+</p>
+<ul class="org-ul">
+<li>2 of Printed Lower Rod Idler Holders
+</li>
+<li>4 of M4 hex nut
+</li>
+<li>2 of M4x14 SHCS
+</li>
+<li>2 of 625 roller bearing 5x16x6
+</li>
+</ul>
+
+<p>
+Insert 625 bearing into hole by pressing them in. If they require more
+force than you can do without tools, trim the hole with a hobby knife. Insert M4 nuts into traps.
+</p>
+
+<p>
+Bolt to back panel using M4 bolts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-6" class="outline-3">
+<h3 id="sec-7-6"><span class="section-number-3">7.6</span> Y Rod-holder back corners</h3>
+<div class="outline-text-3" id="text-7-6">
+<p>
+Parts:
+</p>
+<ul class="org-ul">
+<li>2 of Printed top corner for pulley (has bearing indent and rod
+holder).
+</li>
+<li>Homing switch SS-5GL [with approximately 14 inch of wires]
+</li>
+<li>2 of #4-1/2" wood screw
+</li>
+<li>6 of M4 Hex Nut
+</li>
+<li>2 of 625 roller bearing 5x16x6
+</li>
+</ul>
+
+<p>
+Insert the M4 nuts for all the nut traps.
+</p>
+
+<p>
+Install the 625 bearings in the bottom of the printed parts by
+pressing them in by hand. Clean out the printed part with a hobby
+knife if it's too tight.
+</p>
+
+<p>
+Install the homing switch on the back left corner using the 1/2" long
+wood screws.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-7" class="outline-3">
+<h3 id="sec-7-7"><span class="section-number-3">7.7</span> Y Rod-holder front corners and idlers</h3>
+<div class="outline-text-3" id="text-7-7">
+<p>
+Parts:
+</p>
+<ul class="org-ul">
+<li>2 of Printed top corner for idler (has 8mm rod hole and no hole for
+bearings to sit in)
+</li>
+<li>2 of Printed bottom corner for idler (again, no bearing indent in
+this part)
+</li>
+<li>10 of M4 hex nut
+</li>
+<li>2 of M4x40 SHCS
+</li>
+<li>8 of 624 flanged bearing for belt idler
+</li>
+<li>6 of M4 flat washer
+</li>
+</ul>
+
+<p>
+Insert M4 captive nuts into printed parts.
+</p>
+
+<p>
+Assemble belt idler bolts in following order:
+</p>
+<ul class="org-ul">
+<li>Bolt (M4x40)
+</li>
+<li>Lower printed part
+</li>
+<li>M4 washer
+</li>
+<li>pair of flanged 624 bearings (flanges on outside to keep belt in place)
+</li>
+<li>M4 washer
+</li>
+<li>pair of flanged 624 bearings
+</li>
+<li>M4 washer
+</li>
+<li>Upper corner printed part (bolt goes through the bottom hole into
+captive nut inside)
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-7-8" class="outline-3">
+<h3 id="sec-7-8"><span class="section-number-3">7.8</span> X-carriage back</h3>
+<div class="outline-text-3" id="text-7-8">
+<p>
+Parts:
+</p>
+<ul class="org-ul">
+<li>Printed X-Carriage back half
+</li>
+<li>Homing switch small D2F-01L [with approximately 24-30 inches of wires]
+</li>
+<li>5015 12V blower fan [with approximately 24-30 inches of wires]
+</li>
+<li>7 of M3 Hex Nut
+</li>
+<li>#4-1/2" wood screw
+</li>
+<li>2 M3x20 FHCS
+</li>
+</ul>
+
+<p>
+Insert captive nuts in back and bottom. These hold the fan, fan duct,
+and front half on.
+</p>
+
+<p>
+Screw on the homing switch using the hole closer to the top.
+</p>
+
+<p>
+Bolt the fan on using the flat head screws.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-9" class="outline-3">
+<h3 id="sec-7-9"><span class="section-number-3">7.9</span> XY first assembly</h3>
+<div class="outline-text-3" id="text-7-9">
+<p>
+[get the Y rods into the Y ends and rod holders. Make sure the front
+is the front and the left is the left. ]
+</p>
+
+<p>
+Get the top plate and all XY parts.
+</p>
+
+<p>
+Insert Y rods into bearings.
+</p>
+
+<p>
+Insert 2 short LM8SUU bearings into each X rod. Insert X rods into X ends.
+</p>
+
+<p>
+Put the Y ends on to the end of the Y rods. Bolt to top frame. 
+</p>
+
+<p>
+Install the lower short rod holders in the back. Install the short rods, with a short closed loop belt loose around the shaft. [The tall spacer should go on the side where the X-end's outer idler is closer to the Y rods] Press up on the shaft while pushing down on the lower pulley and tighten the pulley setscrews to hold the rods in place.
+</p>
+
+<p>
+[This is where you'd adjust alignment to get the Y frame to move smoothly]
+</p>
+
+<p>
+Insert M3 captive nut into belt holders. This small part will hold one end of the belt and will be moved in/out to adjust belt tension. 
+</p>
+
+<p>
+Insert one end of the belt into one part, threading the adjustment in only half way through the nut, and thread the belt through the full belt path, starting from the adjustable end, looping back around under the "fixed" clamp, then back through the other belt path to the other adjustable end. Once you've done this and made sure you didn't pull anything too tight, you can cut the belt in half and trim off the excess. There is room for about half an inch of excess on each belt length inside the X carriage.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-10" class="outline-3">
+<h3 id="sec-7-10"><span class="section-number-3">7.10</span> XY assembly into frame</h3>
+<div class="outline-text-3" id="text-7-10">
+<p>
+[insert into side of frame, bolt through the top]
+</p>
+
+<p>
+[add the short rods with short belts]
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-11" class="outline-3">
+<h3 id="sec-7-11"><span class="section-number-3">7.11</span> X carriage back + belt</h3>
+<div class="outline-text-3" id="text-7-11">
+<p>
+[put the x carriage over the short bearings and run the two belts through
+the idlers and stuff. set first belt tension]
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-12" class="outline-3">
+<h3 id="sec-7-12"><span class="section-number-3">7.12</span> X carriage front</h3>
+<div class="outline-text-3" id="text-7-12">
+<p>
+[bolt the front of the x-carriage on]
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-13" class="outline-3">
+<h3 id="sec-7-13"><span class="section-number-3">7.13</span> Extruder Idler lever</h3>
+<div class="outline-text-3" id="text-7-13">
+<p>
+[bolt the 608 bearing to the extruder idler. assemble the bolt that
+sets the idler tension.]
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-14" class="outline-3">
+<h3 id="sec-7-14"><span class="section-number-3">7.14</span> E3d hotend</h3>
+<div class="outline-text-3" id="text-7-14">
+<p>
+[assemble the e3d hotend, fan on fan duct. the teflon tube should
+stick out [3 inches]. Will be trimmed further when installing on extruder]
+</p>
+
+<p>
+[the heater cartridge shouldn't stick more than 1.5mm out of the end of
+the heater block]
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-15" class="outline-3">
+<h3 id="sec-7-15"><span class="section-number-3">7.15</span> Extruder</h3>
+<div class="outline-text-3" id="text-7-15">
+<p>
+[add the e3d hotend, extruder motor, filament drive gear, extruder
+plate, extruder idler, and hotend clamp to the x-carriage. trim the e3d teflon tube to
+be a good fit. ]
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-16" class="outline-3">
+<h3 id="sec-7-16"><span class="section-number-3">7.16</span> Fan Duct</h3>
+<div class="outline-text-3" id="text-7-16">
+<p>
+[put aluminum foil tape on the top next to where the heater block
+goes, and on the bottom to make it easier to clean when melted plastic
+tries to stick to it. Trim foil with hobby knife for nozzle
+hole. Attach to x carriage with M3 bolts. verify heater cartridge,
+clamp screw, and other hot parts have gap away from foil
+tape. They will conduct heat into plastic part.]
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Frame Left/right</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Mount printrboard on the inside of the right frame
+</p>
+
+<p>
+Wire up everything (homing switches, wires going out the back, motors, power-input, LCD).
+</p>
+
+<p>
+The power switch mount holder bolts to the back of the frame.
+</p>
+
+<p>
+Bolt on the left side frame. loop the short belt around the motor pulley. Pull the motor towards the front of the printer to set the belt tension, and while holding it there tighten the 4 screws holding the motor in place on the left plate.
+</p>
+
+<p>
+Do the same on the right plate.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> Odds and ends</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Wire extensions?
+</p>
+
+<p>
+Install filament guide mount and wire guide (bolts go from inside of printer into printed part)
+</p>
+
+<p>
+Install filament guide tube between tube mount and extruder. This is not held in when there's no filament installed so it can easily come out to change filament.
+</p>
+
+<p>
+Install knob on front of LCD to suit your tastes.
+</p>
+
+<p>
+Install spool holder. Insert tab into hole on back, lift part upwards and rotate into place. This removes easily for travel.
+</p>
+</div>
+
+<div id="outline-container-sec-9-1" class="outline-3">
+<h3 id="sec-9-1"><span class="section-number-3">9.1</span> Lights?</h3>
+<div class="outline-text-3" id="text-9-1">
+<p>
+[yeah, you can install lights]
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Nick Winters</p>
+<p class="date">Created: 2016-07-05 Tue 21:44</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.4.51.2 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

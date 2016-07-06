@@ -1,0 +1,435 @@
+* SBHXY Build Manual
+
+This is the build manual for the SBHXY.
+
+ : [[./images/demo.png]]
+
+* Common Build Hints
+
+There are a couple of things that make easier.
+
+** Captive Nuts
+
+Captive nuts that go flat into a part are easier to insert using a longer bolt to push them in.
+
+Captive nuts that go in sideways fit in with the point first into the
+part and are easier to insert with pliers. Once you get it started use
+the tips of your pliers to push the nut in the rest of the way.
+
+** "Tightness"
+
+[don't over tighten bolts. Most of the nuts on this printer sit in
+printed parts or wood which will colapse or deform when over-tightened
+which may prevent you from disassembling it later and will end up
+looser than tightening the screws "just enough"]
+
+[how do you know how much is enough?]
+
+** [fitting laser slots together]
+
+[these might be tight. If you hammer them or pull unevenly apart the melamine kind of delaminates.]
+
+* Assembly Instructions
+
+* Front Panel
+
+Parts:
+ * Lasercut front panel
+ * 4 of M3x25 SHCS
+ * 4 of 10mm spacer with 3mm hole
+ * 4 of M3 nylon lock nut
+ * RepRapDiscount Smart Controller or clone
+ * Optional: foam or foam tape, approximately 3mm thick
+
+If your LCD is loose from the back PCB of the LCD, it will vibrate and make noise. Put foam between the two.
+
+Install the LCD with 10mm spacers and M3x25 and lock nuts. The LCD
+will be on the lower left corner as viewed from the front of the
+machine, with the SD card sticking out to the left and the knob on the
+right of the LCD.
+
+* Frame "Skeleton"
+
+Parts:
+ * Lasercut front panel (with LCD installed)
+ * Lasercut bottom panel
+ * Lasercut back panel
+ * Lasercut top panel
+ * 12 of M3 hex nut
+ * 12 of M3x12 SHCS
+
+Assemble the following frame pieces: Top, Front, Bottom, Back. M3 nuts
+are inserted into the traps then M3x12 bolts go through front and back
+panels to hold the pieces together.
+
+The bottom panel has the holes towards the back of the machine, with
+the pair of non-symetrical holes on the right as the assembled machine
+is viewed from the front. These holes mount the Z homing switch.
+
+The back panel has a slot near the top corner, this also goes towards
+the right as viewed from the front of the assembled machine.
+
+The top panel is the same in every direction.
+
+* Z-Axis
+
+** Z Motor mount
+
+Parts:
+ * Printed Z motor mount
+ * 6 of M3 hex nuts
+ * 4 of M3x10 SHCS
+ * NEMA17 Stepper Motor
+ * GT2 Belt Pulley, 20 teeth with setscrews
+
+Install the 6 M3 hex nuts into the traps using longer M3 bolts. The
+ones going through the side of the printed part are easier to install
+by putting the long bolt through, then threading the nut on, then
+pulling bolt to seat the nut, then unscrewing the bolt.
+
+** Z Idler
+
+[[./images/assembly z-top-rodholder.png]]
+
+Parts:
+ * Printed Z idler mount
+ * 2 of 624 Flanged bearings
+ * M4x20 SHCS
+ * M4 hex nut
+ * 2 of M4 flat Washer
+
+Insert the washers on the outside, bearing pair in the middle into the
+hole for the belt idler, insert the nut and bolt. The bearings should
+spin easily, and not be loose between the printed part to slide along the bolt.
+
+Insert the two M3 nuts into the nut traps using longer bolts to pull
+them in place like before.
+
+** Z Carriage
+
+Parts:
+ * 2 of Z lasercut Z side panels
+ * lasercut Z top panel (has 8 rectangular holes and 4 round ones)
+ * lasercut Z back panel
+ * 4 of Printed Z bearing holder
+ * Printed Z belt holder
+ * Printed Z switch screw holder
+ * 12 of M3 Hex Nut
+ * 6 of M3x12 SHCS
+ * 2 of M3x16 SHCS
+ * 4 of M3x12 SHCS
+ * about 18 inches (0.5 meter) of 6mm wide GT-2 Belt
+
+Using a long bolt install 2 hex nuts into the traps on the belt
+holder. 
+
+Again, using the long bolt put 6 hex nuts into the traps on each of
+the Z bearing holders.
+
+Install one belt end in belt holder with pliers before assembling. The other belt end will be put in once both rod holders and the carriage are assembled.
+
+[Don't fully tighten parts on back plate]
+
+** Bed
+
+Parts:
+ * Lasercut print bed (only 3 holes)
+ * 3 of M3x30 FHCS (Flat head countersunk screws)
+ * 6 of M3 Hex Nut
+ * 6 of M4 flat washer
+ * 3 of Spring
+ * 3 or Printed thumb nut adapter
+ * Z carriage assembly
+ * Blue tape
+
+If not already countersunk, countersink the holes in the lasercut
+plate so the screw heads are flush or slightly lower than the
+surrounding wood.
+
+Insert nuts into the 3 thumb nut adapters with the help of a longer
+bolt.
+
+Insert the flat head bolts through the lasercut piece and tighten a
+hex nut on each bolt all the way up to the plate.
+
+On each bolt, add a M4 washer, spring, then another washer, then the
+lower Z assembly top plate then the thumb nut adapter. Tighten the
+thumb nuts so the springs are about half way compressed.
+
+** Z-Axis assembly in frame
+
+Parts:
+ * 8 of M3x12 SHCS
+ * 2 of 173mm 8mm smooth rod
+
+Insert the rods into the idler and motor mounts. Loop the belt around the motor (slide the motor up first).
+
+Bolt the Z motor mount and top mount into the frame.
+
+Use pliers to install the other belt end. Loop the excess back and hold in place with a zip tie. Trim the zip tie.
+
+Using M3 allen key through the holes in the back plate, tighten the screws on the back of the Z-carriage.
+
+While pulling the motor downwards to tension the belt, tighten the motor screws to set the belt tension.
+
+** Z-Axis homing switch
+
+Parts:
+ * Printed Z homing switch mount
+ * Homing Switch SS-5GL [with approximately 8 inches of wires]
+ * 2 of #4-1/2" wood screw
+ * 2 of M3 Hex Nut
+ * 2 of M3x25 SHCS
+
+Insert nuts into traps.
+
+Run the wood screws through the homing switch into the plastic part.
+
+Bolt into the bottom plate of box using M3x25 screws.
+
+* XY Assembly
+** AB Motor mounts
+
+Parts:
+ * Lasercut left panel
+ * Lasercut right panel
+ * 2 of Printed AB Motor Mount
+ * 2 of NEMA17 Stepper Motor
+ * 8 of M3 Hex Nut
+ * 8 of M3x10 SHCS
+ * 8 of M3x12 SHCS
+ * 8 of M3 Flat Washer
+
+Put M3 nuts in the nut traps.
+ 
+Install a motor with pulley in each motor mount using the M3x10 SHCS
+and flat washers.
+
+Bolt the motor mounts, loosely, to the left and right side panels
+using M3x12 SHCS. The slotted holes let us tension the short belts later.
+
+** X-Ends
+
+Parts:
+ * Printed Left X-End
+ * Printed Right X-End
+ * 8 of flanged 624 bearing for belt idler
+ * 4 Printed X Idler Spacer (4mm hole, approx 11.6mm tall)
+ * 2 of long LM8LUU Linear Bearing 8x15x45mm
+ * 4 of M4 Hex Nut
+ * 4 of M4 Flat Washer
+ * 4 of M4x45 SHCS
+
+Insert M4 nuts into nut traps.
+
+Assemble the idlers as pictured. The idler stack is washer, bearing,
+bearing then spacer. Make sure the spacers are on the correct side as pictured.
+
+The belt-path on these parts should NOT be assembled as mirror images. 
+
+[As long as both are assembled where each has one idler high, and the other low, and they are not built as mirror images you can assemble the rest fine]
+
+** X Axis
+
+Parts:
+ * Left X-end assembly
+ * Right X-end assembly
+ * 4 of short LMS8UU 8x15x17
+ * 2 of 8mm smooth rod 173mm long
+
+Carefully put two LMS8UU linear bearings on each smooth rod.
+
+Insert the rods into the holes on the side of one X-end, then put the
+other X-end on the other side.
+
+** Back short rods
+
+Parts:
+ * 2 of 5mm shaft, 100mm long
+ * 4 of 20 tooth GT2 pulley
+ * Printed pulley spacer (shorter, about 4.85mm long with 5mm bore)
+ * Printed pulley spacer (longer, about 15.65mm long with 5mm bore)
+
+Assemble the parts on the smooth rod as follows:
+ * about 4mm of shaft bare
+ * printed spacer
+ * Pulley with belt closer to spacer. Tighten setscrews.
+ * about 50mm of shaft bare
+ * Pulley oriented in same direction. Leave setscrews slight loose, we
+   will tighten them later.
+
+One rod gets the longer spacer, and one the shorter spacer. 
+
+Leave about 4mm of shaft sticking out of the spacer on one end of the shaft.
+
+The pulley away from the spacer will be put in position later when
+later parts are assembled.
+
+** Back Lower short rod idlers
+
+These parts go on the back of the machine and hold the lower end of
+the short rods that drive the belts on the top.
+
+Parts:
+ * 2 of Printed Lower Rod Idler Holders
+ * 4 of M4 hex nut
+ * 2 of M4x14 SHCS
+ * 2 of 625 roller bearing 5x16x6
+
+Insert 625 bearing into hole by pressing them in. If they require more
+force than you can do without tools, trim the hole with a hobby knife. Insert M4 nuts into traps.
+
+Bolt to back panel using M4 bolts.
+
+** Y Rod-holder back corners
+
+Parts:
+ * 2 of Printed top corner for pulley (has bearing indent and rod
+   holder).
+ * Homing switch SS-5GL [with approximately 14 inch of wires]
+ * 2 of #4-1/2" wood screw
+ * 6 of M4 Hex Nut
+ * 2 of 625 roller bearing 5x16x6
+
+Insert the M4 nuts for all the nut traps.
+
+Install the 625 bearings in the bottom of the printed parts by
+pressing them in by hand. Clean out the printed part with a hobby
+knife if it's too tight.
+
+Install the homing switch on the back left corner using the 1/2" long
+wood screws.
+
+** Y Rod-holder front corners and idlers
+
+Parts:
+ * 2 of Printed top corner for idler (has 8mm rod hole and no hole for
+   bearings to sit in)
+ * 2 of Printed bottom corner for idler (again, no bearing indent in
+   this part)
+ * 10 of M4 hex nut
+ * 2 of M4x40 SHCS
+ * 8 of 624 flanged bearing for belt idler
+ * 6 of M4 flat washer
+
+Insert M4 captive nuts into printed parts.
+
+Assemble belt idler bolts in following order:
+ * Bolt (M4x40)
+ * Lower printed part
+ * M4 washer
+ * pair of flanged 624 bearings (flanges on outside to keep belt in place)
+ * M4 washer
+ * pair of flanged 624 bearings
+ * M4 washer
+ * Upper corner printed part (bolt goes through the bottom hole into
+   captive nut inside)
+
+** X-carriage back
+
+Parts:
+ * Printed X-Carriage back half
+ * Homing switch small D2F-01L [with approximately 24-30 inches of wires]
+ * 5015 12V blower fan [with approximately 24-30 inches of wires]
+ * 7 of M3 Hex Nut
+ * #4-1/2" wood screw
+ * 2 M3x20 FHCS
+
+Insert captive nuts in back and bottom. These hold the fan, fan duct,
+and front half on.
+
+Screw on the homing switch using the hole closer to the top.
+
+Bolt the fan on using the flat head screws.
+
+** XY first assembly
+
+[get the Y rods into the Y ends and rod holders. Make sure the front
+is the front and the left is the left. ]
+
+Get the top plate and all XY parts.
+
+Insert Y rods into bearings.
+
+Insert 2 short LM8SUU bearings into each X rod. Insert X rods into X ends.
+
+Put the Y ends on to the end of the Y rods. Bolt to top frame. 
+
+Install the lower short rod holders in the back. Install the short rods, with a short closed loop belt loose around the shaft. [The tall spacer should go on the side where the X-end's outer idler is closer to the Y rods] Press up on the shaft while pushing down on the lower pulley and tighten the pulley setscrews to hold the rods in place.
+
+[This is where you'd adjust alignment to get the Y frame to move smoothly]
+
+Insert M3 captive nut into belt holders. This small part will hold one end of the belt and will be moved in/out to adjust belt tension. 
+
+Insert one end of the belt into one part, threading the adjustment in only half way through the nut, and thread the belt through the full belt path, starting from the adjustable end, looping back around under the "fixed" clamp, then back through the other belt path to the other adjustable end. Once you've done this and made sure you didn't pull anything too tight, you can cut the belt in half and trim off the excess. There is room for about half an inch of excess on each belt length inside the X carriage.
+
+** XY assembly into frame
+
+[insert into side of frame, bolt through the top]
+
+[add the short rods with short belts]
+
+** X carriage back + belt
+
+[put the x carriage over the short bearings and run the two belts through
+the idlers and stuff. set first belt tension]
+
+** X carriage front
+
+[bolt the front of the x-carriage on]
+
+** Extruder Idler lever
+
+[bolt the 608 bearing to the extruder idler. assemble the bolt that
+sets the idler tension.]
+
+** E3d hotend
+
+[assemble the e3d hotend, fan on fan duct. the teflon tube should
+stick out [3 inches]. Will be trimmed further when installing on extruder]
+
+[the heater cartridge shouldn't stick more than 1.5mm out of the end of
+the heater block]
+
+** Extruder
+
+[add the e3d hotend, extruder motor, filament drive gear, extruder
+plate, extruder idler, and hotend clamp to the x-carriage. trim the e3d teflon tube to
+be a good fit. ]
+
+** Fan Duct
+
+[put aluminum foil tape on the top next to where the heater block
+goes, and on the bottom to make it easier to clean when melted plastic
+tries to stick to it. Trim foil with hobby knife for nozzle
+hole. Attach to x carriage with M3 bolts. verify heater cartridge,
+clamp screw, and other hot parts have gap away from foil
+tape. They will conduct heat into plastic part.]
+
+* Frame Left/right
+
+Mount printrboard on the inside of the right frame
+
+Wire up everything (homing switches, wires going out the back, motors, power-input, LCD).
+
+The power switch mount holder bolts to the back of the frame.
+
+Bolt on the left side frame. loop the short belt around the motor pulley. Pull the motor towards the front of the printer to set the belt tension, and while holding it there tighten the 4 screws holding the motor in place on the left plate.
+
+Do the same on the right plate.
+
+* Odds and ends
+
+Wire extensions?
+
+Install filament guide mount and wire guide (bolts go from inside of printer into printed part)
+
+Install filament guide tube between tube mount and extruder. This is not held in when there's no filament installed so it can easily come out to change filament.
+
+Install knob on front of LCD to suit your tastes.
+
+Install spool holder. Insert tab into hole on back, lift part upwards and rotate into place. This removes easily for travel.
+
+** Lights?
+
+[yeah, you can install lights]
