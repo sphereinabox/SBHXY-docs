@@ -1,0 +1,2 @@
+
+The assembly manual for the SBHXY: [[./build-manual.html]]
