@@ -33,6 +33,8 @@ looser than tightening the screws "just enough"]
 
 * Front Panel
 
+[[./images/assembly front-panel.png]]
+
 Parts:
  * Lasercut front panel
  * 4 of M3x25 SHCS
@@ -49,6 +51,8 @@ machine, with the SD card sticking out to the left and the knob on the
 right of the LCD.
 
 * Frame "Skeleton"
+
+[[./images/assembly frame-skeleton.png]]
 
 Parts:
  * Lasercut front panel (with LCD installed)
@@ -74,6 +78,8 @@ The top panel is the same in every direction.
 * Z-Axis
 
 ** Z Motor mount
+
+[[./images/assembly z-bottom-motor.png]]
 
 Parts:
  * Printed Z motor mount
@@ -107,6 +113,8 @@ them in place like before.
 
 ** Z Carriage
 
+[[./images/assembly z-carriage.png]]
+
 Parts:
  * 2 of Z lasercut Z side panels
  * lasercut Z top panel (has 8 rectangular holes and 4 round ones)
@@ -131,6 +139,8 @@ Install one belt end in belt holder with pliers before assembling. The other bel
 [Don't fully tighten parts on back plate]
 
 ** Bed
+
+[[./images/assembly z-bed.png]]
 
 Parts:
  * Lasercut print bed (only 3 holes)
@@ -158,6 +168,8 @@ thumb nuts so the springs are about half way compressed.
 
 ** Z-Axis assembly in frame
 
+[[./images/assembly z-axis in frame.png]]
+
 Parts:
  * 8 of M3x12 SHCS
  * 2 of 173mm 8mm smooth rod
@@ -174,6 +186,9 @@ While pulling the motor downwards to tension the belt, tighten the motor screws 
 
 ** Z-Axis homing switch
 
+[[./images/assembly z-switch-mount.png]]
+[[./images/assembly z-switch-mount-installed.png]]
+
 Parts:
  * Printed Z homing switch mount
  * Homing Switch SS-5GL [with approximately 8 inches of wires]
@@ -189,6 +204,8 @@ Bolt into the bottom plate of box using M3x25 screws.
 
 * XY Assembly
 ** AB Motor mounts
+
+[[./images/assembly a motor.png]]
 
 Parts:
  * Lasercut left panel
@@ -209,6 +226,8 @@ Bolt the motor mounts, loosely, to the left and right side panels
 using M3x12 SHCS. The slotted holes let us tension the short belts later.
 
 ** X-Ends
+
+[[./images/assembly x-ends.png]]
 
 Parts:
  * Printed Left X-End
@@ -231,6 +250,8 @@ The belt-path on these parts should NOT be assembled as mirror images.
 
 ** X Axis
 
+[[./images/assembly x-axis.png]]
+
 Parts:
  * Left X-end assembly
  * Right X-end assembly
@@ -243,6 +264,8 @@ Insert the rods into the holes on the side of one X-end, then put the
 other X-end on the other side.
 
 ** Back short rods
+
+[[./images/assembly back short rods.png]]
 
 Parts:
  * 2 of 5mm shaft, 100mm long
@@ -267,6 +290,8 @@ later parts are assembled.
 
 ** Back Lower short rod idlers
 
+[[./images/assembly back lower short rod idlers.png]]
+
 These parts go on the back of the machine and hold the lower end of
 the short rods that drive the belts on the top.
 
@@ -282,6 +307,8 @@ force than you can do without tools, trim the hole with a hobby knife. Insert M4
 Bolt to back panel using M4 bolts.
 
 ** Y Rod-holder back corners
+
+[[./images/assembly y back rod holders.png]]
 
 Parts:
  * 2 of Printed top corner for pulley (has bearing indent and rod
@@ -301,6 +328,8 @@ Install the homing switch on the back left corner using the 1/2" long
 wood screws.
 
 ** Y Rod-holder front corners and idlers
+
+[[./images/assembly y front rod holders.png]]
 
 Parts:
  * 2 of Printed top corner for idler (has 8mm rod hole and no hole for
@@ -327,6 +356,11 @@ Assemble belt idler bolts in following order:
 
 ** X-carriage back
 
+[[./images/assembly x-carriage back]]
+
+The image above shows the bearings installed which does not happen in
+this step.
+
 Parts:
  * Printed X-Carriage back half
  * Homing switch small D2F-01L [with approximately 24-30 inches of wires]
@@ -343,6 +377,8 @@ Screw on the homing switch using the hole closer to the top.
 Bolt the fan on using the flat head screws.
 
 ** XY first assembly
+
+[[./images/assembly xy first.png]]
 
 [get the Y rods into the Y ends and rod holders. Make sure the front
 is the front and the left is the left. ]
@@ -364,6 +400,8 @@ Insert M3 captive nut into belt holders. This small part will hold one end of th
 Insert one end of the belt into one part, threading the adjustment in only half way through the nut, and thread the belt through the full belt path, starting from the adjustable end, looping back around under the "fixed" clamp, then back through the other belt path to the other adjustable end. Once you've done this and made sure you didn't pull anything too tight, you can cut the belt in half and trim off the excess. There is room for about half an inch of excess on each belt length inside the X carriage.
 
 ** XY assembly into frame
+
+[[./images/assembly xy into frame.png]]
 
 [insert into side of frame, bolt through the top]
 
