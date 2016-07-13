@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>build-manual</title>
-<!-- 2016-07-12 Tue 13:38 -->
+<!-- 2016-07-13 Wed 14:36 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Nick Winters" />
@@ -174,13 +174,16 @@ for the JavaScript code in this tag.
 <li><a href="#sec-7-7">7.7. Y Rod-holder front corners and idlers</a></li>
 <li><a href="#sec-7-8">7.8. X-carriage back</a></li>
 <li><a href="#sec-7-9">7.9. XY first assembly</a></li>
-<li><a href="#sec-7-10">7.10. XY assembly into frame</a></li>
-<li><a href="#sec-7-11">7.11. X carriage back + belt</a></li>
-<li><a href="#sec-7-12">7.12. X carriage front</a></li>
-<li><a href="#sec-7-13">7.13. Extruder Idler lever</a></li>
+<li><a href="#sec-7-10">7.10. X carriage back on rails</a></li>
+<li><a href="#sec-7-11">7.11. XY assembly into frame</a></li>
+<li><a href="#sec-7-12">7.12. XY Belt</a></li>
+<li><a href="#sec-7-13">7.13. X carriage front</a></li>
 <li><a href="#sec-7-14">7.14. E3d hotend</a></li>
-<li><a href="#sec-7-15">7.15. Extruder</a></li>
-<li><a href="#sec-7-16">7.16. Fan Duct</a></li>
+<li><a href="#sec-7-15">7.15. Extruder Plate</a></li>
+<li><a href="#sec-7-16">7.16. Extruder Idler lever</a></li>
+<li><a href="#sec-7-17">7.17. Extruder Idler Bolt</a></li>
+<li><a href="#sec-7-18">7.18. Blower</a></li>
+<li><a href="#sec-7-19">7.19. Blower Duct</a></li>
 </ul>
 </li>
 <li><a href="#sec-8">8. Frame Left/right</a></li>
@@ -189,6 +192,7 @@ for the JavaScript code in this tag.
 <li><a href="#sec-9-1">9.1. Lights?</a></li>
 </ul>
 </li>
+<li><a href="#sec-10">10. First Print</a></li>
 </ul>
 </div>
 </div>
@@ -947,9 +951,11 @@ captive nut inside)
 <div id="outline-container-sec-7-8" class="outline-3">
 <h3 id="sec-7-8"><span class="section-number-3">7.8</span> X-carriage back</h3>
 <div class="outline-text-3" id="text-7-8">
-<p>
-<a href="./images/assembly x-carriage back">./images/assembly x-carriage back</a>
+
+<div class="figure">
+<p><img src="./images/assembly x-carriage back.png" alt="assembly x-carriage back.png" />
 </p>
+</div>
 
 <p>
 The image above shows the bearings installed which does not happen in
@@ -970,17 +976,27 @@ Parts:
 </li>
 <li>#4-1/2" wood screw
 </li>
-<li>2 M3x20 FHCS
+<li>2 M3x20 FHCS (countersunk)
 </li>
 </ul>
 
 <p>
-Insert captive nuts in back and bottom. These hold the fan, fan duct,
-and front half on.
+Insert the M3 nuts into the nut traps:
 </p>
+<ul class="org-ul">
+<li>2 for fan mounting
+</li>
+<li>2 for duct mounting
+</li>
+<li>3 for x-carriage front mounting
+</li>
+<li>1 for x-belt clamp
+</li>
+</ul>
 
 <p>
-Screw on the homing switch using the hole closer to the top.
+Install the homing switch using a single 1/2" long #4 wood screw. Put
+the screw closer to the top (where the motor will mount)
 </p>
 
 <p>
@@ -1038,8 +1054,18 @@ Insert one end of the belt into one part, threading the adjustment in only half 
 </div>
 
 <div id="outline-container-sec-7-10" class="outline-3">
-<h3 id="sec-7-10"><span class="section-number-3">7.10</span> XY assembly into frame</h3>
+<h3 id="sec-7-10"><span class="section-number-3">7.10</span> X carriage back on rails</h3>
 <div class="outline-text-3" id="text-7-10">
+<p>
+Install the X carriage over the short bearings on the X rails. The
+front half will clamp the bearings in place later, but first, the belts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-11" class="outline-3">
+<h3 id="sec-7-11"><span class="section-number-3">7.11</span> XY assembly into frame</h3>
+<div class="outline-text-3" id="text-7-11">
 
 <div class="figure">
 <p><img src="./images/assembly xy into frame.png" alt="assembly xy into frame.png" />
@@ -1056,31 +1082,121 @@ Insert one end of the belt into one part, threading the adjustment in only half 
 </div>
 </div>
 
-<div id="outline-container-sec-7-11" class="outline-3">
-<h3 id="sec-7-11"><span class="section-number-3">7.11</span> X carriage back + belt</h3>
-<div class="outline-text-3" id="text-7-11">
-<p>
-[put the x carriage over the short bearings and run the two belts through
-the idlers and stuff. set first belt tension]
-</p>
-</div>
-</div>
-
 <div id="outline-container-sec-7-12" class="outline-3">
-<h3 id="sec-7-12"><span class="section-number-3">7.12</span> X carriage front</h3>
+<h3 id="sec-7-12"><span class="section-number-3">7.12</span> XY Belt</h3>
 <div class="outline-text-3" id="text-7-12">
 <p>
-[bolt the front of the x-carriage on]
+Parts:
+</p>
+<ul class="org-ul">
+<li>Printed top and bottom belt holders (mirrored parts)
+</li>
+<li>Printed Belt Clamp (flat on one side, ribbed on the other)
+</li>
+<li>2 of M3 hex nut
+</li>
+<li>M3x16 SHCS
+</li>
+<li>2 of M3x35 SHCS
+</li>
+</ul>
+
+<p>
+[The two belt paths as seen from the top of the machine when you're
+facing the front wrap around a 'b' and 'd' shape. It doesn't matter
+which is the top belt or the bottom, but the idlers on the X ends need
+to be configured for what you've chosen. My CAD drawings have the 'd'
+belt on top, and 'b' on the bottom.]
+</p>
+
+<p>
+Start by using pliers to insert one end of the belt into the top belt
+holder.
+</p>
+
+<p>
+Insert a M3 nut into the nut trap and install on the X carriage by
+threading the M3x35 bolt through the hole into the carriage and into
+the nut on the far side of the belt holder. Only tighten the screw
+enough to thread through the nut, the rest of the thread is used to
+adjust the belt tension.
+</p>
+
+<p>
+Feed the belt through the belt path for the upper belt
+(counter-clockwise around a 'd' if you're following the CAD drawings)
+and back to the other side of the X carriage.
+</p>
+
+<p>
+Insert the M3x16 screw through the flat side of the belt
+clamp. Take the belt that's now feeding into the right side of the
+X-carriage and put it under the clamp and loop the belt back out the
+right side of the X carriage for the bottom portion of the belt path.
+</p>
+
+<p>
+Route the belt through the lower belt path (clockwise around a 'b' if
+you're following the CAD drawing). Using pliers, insert the other end
+of the belt into the other belt holder like the first one. Install a
+M3 nut into the belt holder and bolt into the lower portion of the
+X-carriage using another M3x35 going through the x-carriage and into
+the nut as before.
+</p>
+
+<p>
+I expect the belt is a bit loose at this point, so before using the
+adjustment on the M3x35mm screws, loosen the M3x16 going through the
+rectangular clamp where the belt does a U-turn and pull on the belt to
+get both belts on but not super tight with about the same tension.
+</p>
+
+<p>
+Verify your belts are all routed correctly, for example not falling
+off the side of pulleys or idlers. 
+</p>
+
+<p>
+At this point, I expect the belts to be on tight enough to not fall
+off but not tight enough to make a note when plucked. Also, the nuts
+on the left side of the x-carriage (as you're facing the front of the
+machine) should have only the tip of M3x35mm screw poking through so
+we can adjust the belts tighter later. If you need to adjust the
+belts, loosen the part where the belts U-turn to loosen the belts then
+put them back.
+</p>
+
+<p>
+(the slit in the X-end belt holders that slide onto the belt should
+face towards the center of the two belts)
 </p>
 </div>
 </div>
 
 <div id="outline-container-sec-7-13" class="outline-3">
-<h3 id="sec-7-13"><span class="section-number-3">7.13</span> Extruder Idler lever</h3>
+<h3 id="sec-7-13"><span class="section-number-3">7.13</span> X carriage front</h3>
 <div class="outline-text-3" id="text-7-13">
+
+<div class="figure">
+<p><img src="./images/assembly x-carriage front.png" alt="assembly x-carriage front.png" />
+</p>
+</div>
+
 <p>
-[bolt the 608 bearing to the extruder idler. assemble the bolt that
-sets the idler tension.]
+Parts:
+</p>
+<ul class="org-ul">
+<li>Printed X-Carriage Front
+</li>
+<li>3 of M3x25 SHCS
+</li>
+</ul>
+
+<p>
+Using 3 M3x25 SHCS and an allen key, attach the front half of the
+X-Carriage to the back half. Make sure the linear bearings are all
+seated well before tightening the screws. Don't over-tigthen the
+screws.
 </p>
 </div>
 </div>
@@ -1101,19 +1217,198 @@ the heater block]
 </div>
 
 <div id="outline-container-sec-7-15" class="outline-3">
-<h3 id="sec-7-15"><span class="section-number-3">7.15</span> Extruder</h3>
+<h3 id="sec-7-15"><span class="section-number-3">7.15</span> Extruder Plate</h3>
 <div class="outline-text-3" id="text-7-15">
+
+<div class="figure">
+<p><img src="./images/assembly extruder plate.png" alt="assembly extruder plate.png" />
+</p>
+</div>
+
 <p>
-[add the e3d hotend, extruder motor, filament drive gear, extruder
-plate, extruder idler, and hotend clamp to the x-carriage. trim the e3d teflon tube to
-be a good fit. ]
+Parts:
+</p>
+<ul class="org-ul">
+<li>Printed Extruder Plate
+</li>
+<li>Printed Hotend Clamp
+</li>
+<li>2 of M3x20 SHCS
+</li>
+<li>M3x8 flat head (countersunk) screw
+</li>
+<li>2 of M3x12 SHCS
+</li>
+<li>NEMA17 Stepper for extruder
+</li>
+<li>Extruder filament drive gear
+</li>
+<li>e3d v6 assembly with at least 3 inches of filament guide tube
+</li>
+<li>Hobby knife with sharp blade
+</li>
+</ul>
+
+<p>
+Attach the NEMA17 motor and extruder plate to the front of the
+X-carriage using the M3x12 screws.
+</p>
+
+<p>
+Insert the filament tube of the hotend into the extruder plate. It
+should be too long and stick out past where the filament drive gear
+is. 
+</p>
+
+<p>
+Insert the groove into the groove clamp and trim off the excess
+filament guide tube around the printed part. Clamp down the groove
+mount with the printed clamp and two M3x20 SHCS.
+</p>
+
+<p>
+Install the filament drive gear on the motor shaft with the setscrew
+futher away from the motor. Align the setscrew on the flat of the
+motor shaft, and the filament teeth with the filament path, and
+tighten the drive gear setscrew.
 </p>
 </div>
 </div>
 
 <div id="outline-container-sec-7-16" class="outline-3">
-<h3 id="sec-7-16"><span class="section-number-3">7.16</span> Fan Duct</h3>
+<h3 id="sec-7-16"><span class="section-number-3">7.16</span> Extruder Idler lever</h3>
 <div class="outline-text-3" id="text-7-16">
+
+<div class="figure">
+<p><img src="./images/assembly extruder idler.png" alt="assembly extruder idler.png" />
+</p>
+</div>
+
+<p>
+Parts:
+</p>
+<ul class="org-ul">
+<li>Printed Extruder Idler
+</li>
+<li>608 Skate bearing 8x22x7
+</li>
+<li>M3x16 SHCS
+</li>
+<li>M5x10
+</li>
+<li>M5 Flat Washer
+</li>
+</ul>
+
+<p>
+Insert the 608 bearing over the post on the printed extruder
+idler. Secure the 608 bearing on the printed part with the M5 bolt and
+washer.
+</p>
+
+<p>
+Install the extruder idler on the top right screw of the extruder
+motor using the M3x16 screw. Only lightly tighten this screw so the
+idler can still rotate in and out.
+</p>
+
+<p>
+Bolt the 608 bearing to the extruder idler. assemble the bolt that
+sets the idler tension.]
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-17" class="outline-3">
+<h3 id="sec-7-17"><span class="section-number-3">7.17</span> Extruder Idler Bolt</h3>
+<div class="outline-text-3" id="text-7-17">
+
+<div class="figure">
+<p><img src="./images/assembly extruder tension bolt.png" alt="assembly extruder tension bolt.png" />
+</p>
+</div>
+
+<p>
+Parts:
+</p>
+<ul class="org-ul">
+<li>2 of Printed Idler Pivot (small half cylinder things with a
+circular hole in the flat face)
+</li>
+<li>M3x45 bolt
+</li>
+<li>M3 hex nut
+</li>
+<li>Extruder Spring
+</li>
+<li>2 of M4 flat washer
+</li>
+<li>A couple feet of piece of PLA filament.
+</li>
+</ul>
+
+<p>
+Insert the long bolt through the flat face of the pivot, through the
+extruder idler lever, then through the round face of the pivot,
+washer, spring, washer then m3 nut.
+</p>
+
+<p>
+The second pivot snaps on to the front face of the extruder.
+</p>
+
+<p>
+Feed some filmaent into the top of the extruder through the idler. You
+should be able to push it enough to move the filament idler back, but
+when you pull the filament back out it should not be flattened by the
+pressure. Having small teeth marks and a thin flat on the opposite
+side is about the right amount of tension.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-18" class="outline-3">
+<h3 id="sec-7-18"><span class="section-number-3">7.18</span> Blower</h3>
+<div class="outline-text-3" id="text-7-18">
+<p>
+Parts:
+</p>
+<ul class="org-ul">
+<li>5015 blower
+</li>
+<li>2 of M3x20 screws (preferably flat head/countersunk)
+</li>
+</ul>
+
+<p>
+Install the blower on the back of the X-carriage with M3x20 screws.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-19" class="outline-3">
+<h3 id="sec-7-19"><span class="section-number-3">7.19</span> Blower Duct</h3>
+<div class="outline-text-3" id="text-7-19">
+
+<div class="figure">
+<p><img src="./images/assembly blower duct.png" alt="assembly blower duct.png" />
+</p>
+</div>
+
+<p>
+Parts:
+</p>
+<ul class="org-ul">
+<li>Printed blower duct
+</li>
+<li>Aluminum foil tape
+</li>
+<li>2 of M3x10 SHCS
+</li>
+<li>hobby knife
+</li>
+</ul>
+
 <p>
 [put aluminum foil tape on the top next to where the heater block
 goes, and on the bottom to make it easier to clean when melted plastic
@@ -1184,10 +1479,36 @@ Install spool holder. Insert tab into hole on back, lift part upwards and rotate
 </div>
 </div>
 </div>
+
+<div id="outline-container-sec-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> First Print</h2>
+<div class="outline-text-2" id="text-10">
+<p>
+Lots to write up here:
+</p>
+<ul class="org-ul">
+<li>Adjust the tension on the filament idler nut so that the filament
+doesn't end up with a large flat on one side if you take it back
+out of the extruder.
+</li>
+<li>Adjust homing position at bottom so z-carriage barely doesn't
+bottom out
+</li>
+<li>Adjust bed position to be very low.
+</li>
+<li>Jog from Z home to Z of 0 slowly to not crash into nozzle.
+</li>
+<li>Adjust bed to be near nozzle and level.
+</li>
+<li>Optional?: Adjust z-height in firmware.
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Nick Winters</p>
-<p class="date">Created: 2016-07-12 Tue 13:38</p>
+<p class="date">Created: 2016-07-13 Wed 14:36</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.4.51.2 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>

@@ -356,7 +356,7 @@ Assemble belt idler bolts in following order:
 
 ** X-carriage back
 
-[[./images/assembly x-carriage back]]
+[[./images/assembly x-carriage back.png]]
 
 The image above shows the bearings installed which does not happen in
 this step.
@@ -367,12 +367,16 @@ Parts:
  * 5015 12V blower fan [with approximately 24-30 inches of wires]
  * 7 of M3 Hex Nut
  * #4-1/2" wood screw
- * 2 M3x20 FHCS
+ * 2 M3x20 FHCS (countersunk)
 
-Insert captive nuts in back and bottom. These hold the fan, fan duct,
-and front half on.
+Insert the M3 nuts into the nut traps:
+ * 2 for fan mounting
+ * 2 for duct mounting
+ * 3 for x-carriage front mounting
+ * 1 for x-belt clamp
 
-Screw on the homing switch using the hole closer to the top.
+Install the homing switch using a single 1/2" long #4 wood screw. Put
+the screw closer to the top (where the motor will mount)
 
 Bolt the fan on using the flat head screws.
 
@@ -399,6 +403,11 @@ Insert M3 captive nut into belt holders. This small part will hold one end of th
 
 Insert one end of the belt into one part, threading the adjustment in only half way through the nut, and thread the belt through the full belt path, starting from the adjustable end, looping back around under the "fixed" clamp, then back through the other belt path to the other adjustable end. Once you've done this and made sure you didn't pull anything too tight, you can cut the belt in half and trim off the excess. There is room for about half an inch of excess on each belt length inside the X carriage.
 
+** X carriage back on rails
+
+Install the X carriage over the short bearings on the X rails. The
+front half will clamp the bearings in place later, but first, the belts.
+
 ** XY assembly into frame
 
 [[./images/assembly xy into frame.png]]
@@ -407,19 +416,77 @@ Insert one end of the belt into one part, threading the adjustment in only half 
 
 [add the short rods with short belts]
 
-** X carriage back + belt
+** XY Belt
 
-[put the x carriage over the short bearings and run the two belts through
-the idlers and stuff. set first belt tension]
+Parts:
+ * Printed top and bottom belt holders (mirrored parts)
+ * Printed Belt Clamp (flat on one side, ribbed on the other)
+ * 2 of M3 hex nut
+ * M3x16 SHCS
+ * 2 of M3x35 SHCS
+
+[The two belt paths as seen from the top of the machine when you're
+facing the front wrap around a 'b' and 'd' shape. It doesn't matter
+which is the top belt or the bottom, but the idlers on the X ends need
+to be configured for what you've chosen. My CAD drawings have the 'd'
+belt on top, and 'b' on the bottom.]
+
+Start by using pliers to insert one end of the belt into the top belt
+holder.
+
+Insert a M3 nut into the nut trap and install on the X carriage by
+threading the M3x35 bolt through the hole into the carriage and into
+the nut on the far side of the belt holder. Only tighten the screw
+enough to thread through the nut, the rest of the thread is used to
+adjust the belt tension.
+
+Feed the belt through the belt path for the upper belt
+(counter-clockwise around a 'd' if you're following the CAD drawings)
+and back to the other side of the X carriage.
+
+Insert the M3x16 screw through the flat side of the belt
+clamp. Take the belt that's now feeding into the right side of the
+X-carriage and put it under the clamp and loop the belt back out the
+right side of the X carriage for the bottom portion of the belt path.
+
+Route the belt through the lower belt path (clockwise around a 'b' if
+you're following the CAD drawing). Using pliers, insert the other end
+of the belt into the other belt holder like the first one. Install a
+M3 nut into the belt holder and bolt into the lower portion of the
+X-carriage using another M3x35 going through the x-carriage and into
+the nut as before.
+
+I expect the belt is a bit loose at this point, so before using the
+adjustment on the M3x35mm screws, loosen the M3x16 going through the
+rectangular clamp where the belt does a U-turn and pull on the belt to
+get both belts on but not super tight with about the same tension.
+
+Verify your belts are all routed correctly, for example not falling
+off the side of pulleys or idlers. 
+
+At this point, I expect the belts to be on tight enough to not fall
+off but not tight enough to make a note when plucked. Also, the nuts
+on the left side of the x-carriage (as you're facing the front of the
+machine) should have only the tip of M3x35mm screw poking through so
+we can adjust the belts tighter later. If you need to adjust the
+belts, loosen the part where the belts U-turn to loosen the belts then
+put them back.
+
+(the slit in the X-end belt holders that slide onto the belt should
+face towards the center of the two belts)
 
 ** X carriage front
 
-[bolt the front of the x-carriage on]
+[[./images/assembly x-carriage front.png]]
 
-** Extruder Idler lever
+Parts:
+ * Printed X-Carriage Front
+ * 3 of M3x25 SHCS
 
-[bolt the 608 bearing to the extruder idler. assemble the bolt that
-sets the idler tension.]
+Using 3 M3x25 SHCS and an allen key, attach the front half of the
+X-Carriage to the back half. Make sure the linear bearings are all
+seated well before tightening the screws. Don't over-tigthen the
+screws.
 
 ** E3d hotend
 
@@ -429,13 +496,101 @@ stick out [3 inches]. Will be trimmed further when installing on extruder]
 [the heater cartridge shouldn't stick more than 1.5mm out of the end of
 the heater block]
 
-** Extruder
+** Extruder Plate
 
-[add the e3d hotend, extruder motor, filament drive gear, extruder
-plate, extruder idler, and hotend clamp to the x-carriage. trim the e3d teflon tube to
-be a good fit. ]
+[[./images/assembly extruder plate.png]]
 
-** Fan Duct
+Parts:
+ * Printed Extruder Plate
+ * Printed Hotend Clamp
+ * 2 of M3x20 SHCS
+ * M3x8 flat head (countersunk) screw
+ * 2 of M3x12 SHCS
+ * NEMA17 Stepper for extruder
+ * Extruder filament drive gear
+ * e3d v6 assembly with at least 3 inches of filament guide tube
+ * Hobby knife with sharp blade
+
+Attach the NEMA17 motor and extruder plate to the front of the
+X-carriage using the M3x12 screws.
+
+Insert the filament tube of the hotend into the extruder plate. It
+should be too long and stick out past where the filament drive gear
+is. 
+
+Insert the groove into the groove clamp and trim off the excess
+filament guide tube around the printed part. Clamp down the groove
+mount with the printed clamp and two M3x20 SHCS.
+
+Install the filament drive gear on the motor shaft with the setscrew
+futher away from the motor. Align the setscrew on the flat of the
+motor shaft, and the filament teeth with the filament path, and
+tighten the drive gear setscrew.
+
+** Extruder Idler lever
+
+[[./images/assembly extruder idler.png]]
+
+Parts:
+ * Printed Extruder Idler
+ * 608 Skate bearing 8x22x7
+ * M3x16 SHCS
+ * M5x10
+ * M5 Flat Washer
+
+Insert the 608 bearing over the post on the printed extruder
+idler. Secure the 608 bearing on the printed part with the M5 bolt and
+washer.
+
+Install the extruder idler on the top right screw of the extruder
+motor using the M3x16 screw. Only lightly tighten this screw so the
+idler can still rotate in and out.
+
+Bolt the 608 bearing to the extruder idler. assemble the bolt that
+sets the idler tension.]
+
+** Extruder Idler Bolt
+
+[[./images/assembly extruder tension bolt.png]]
+
+Parts:
+ * 2 of Printed Idler Pivot (small half cylinder things with a
+   circular hole in the flat face)
+ * M3x45 bolt
+ * M3 hex nut
+ * Extruder Spring
+ * 2 of M4 flat washer
+ * A couple feet of piece of PLA filament.
+
+Insert the long bolt through the flat face of the pivot, through the
+extruder idler lever, then through the round face of the pivot,
+washer, spring, washer then m3 nut.
+
+The second pivot snaps on to the front face of the extruder.
+
+Feed some filmaent into the top of the extruder through the idler. You
+should be able to push it enough to move the filament idler back, but
+when you pull the filament back out it should not be flattened by the
+pressure. Having small teeth marks and a thin flat on the opposite
+side is about the right amount of tension.
+
+** Blower
+
+Parts:
+ * 5015 blower
+ * 2 of M3x20 screws (preferably flat head/countersunk)
+
+Install the blower on the back of the X-carriage with M3x20 screws.
+
+** Blower Duct
+
+[[./images/assembly blower duct.png]]
+
+Parts:
+ * Printed blower duct
+ * Aluminum foil tape
+ * 2 of M3x10 SHCS
+ * hobby knife
 
 [put aluminum foil tape on the top next to where the heater block
 goes, and on the bottom to make it easier to clean when melted plastic
@@ -471,3 +626,15 @@ Install spool holder. Insert tab into hole on back, lift part upwards and rotate
 ** Lights?
 
 [yeah, you can install lights]
+
+* First Print
+Lots to write up here:
+ * Adjust the tension on the filament idler nut so that the filament
+   doesn't end up with a large flat on one side if you take it back
+   out of the extruder.
+ * Adjust homing position at bottom so z-carriage barely doesn't
+   bottom out
+ * Adjust bed position to be very low.
+ * Jog from Z home to Z of 0 slowly to not crash into nozzle.
+ * Adjust bed to be near nozzle and level.
+ * Optional?: Adjust z-height in firmware.
