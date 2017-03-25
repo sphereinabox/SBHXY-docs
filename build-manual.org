@@ -2,8 +2,6 @@
 
 This is the build manual for the SBHXY.
 
- : [[./images/demo.png]]
-
 * Common Build Hints
 
 There are a couple of things that make easier.
@@ -482,6 +480,9 @@ face towards the center of the two belts)
 Parts:
  * Printed X-Carriage Front
  * 3 of M3x25 SHCS
+ * 2 of M3 Hex Nut
+
+Insert M3 nuts into the traps for the hotend groove mount.
 
 Using 3 M3x25 SHCS and an allen key, attach the front half of the
 X-Carriage to the back half. Make sure the linear bearings are all
