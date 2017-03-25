@@ -1,0 +1,18 @@
+* SBHXY
+SBHXY is an open source 3d Printer design using the [[http://corexy.com][Core XY]] motion system for XY, and is made in [[http://reprap.org][RepRap]] style except with a mix of printed and lasercut parts.
+
+[[./images/SBHXY.png]]
+
+SBHXY is licensed GPL v3.
+
+SBHXY was designed to fit a small print volume in a relatively small amount of desk space. The print volume is 100x100x100mm, but the exterior dimensions, without print spool or top wires is only 227x220x316mm.
+
+SBHXY was prototyped at the [[http://sbhackerspace.com][Santa Barbara Hackerspace]].
+
+* TODO:
+ - Add section to readme about getting started building this thing before getting to build manual
+ - Make licensing + copyright notes in OnShape document
+ - Link to OnShape document
+ - DXFs are for the black or white Melamine which is 6.7mm thick?
+ - Printrboard LCD PCB
+
